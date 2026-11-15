@@ -1,0 +1,235 @@
+{
+  "pages": [
+    {
+      "name": "index.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-02-banner.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-03-upload.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-04-checkout.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-05-result.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-06-tracking.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-07-poster.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-08-plot.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-09-sticker.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-10-exhibition.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-11-flag.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-12-admin.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-13-guide.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-14-contact.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index-map.html",
+      "width": 1280,
+      "status": "passed"
+    },
+    {
+      "name": "index.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-02-banner.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-03-upload.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-04-checkout.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-05-result.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-06-tracking.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-07-poster.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-08-plot.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-09-sticker.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-10-exhibition.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-11-flag.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-12-admin.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-13-guide.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-14-contact.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index-map.html",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "name": "index.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-02-banner.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-03-upload.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-04-checkout.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-05-result.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-06-tracking.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-07-poster.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-08-plot.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-09-sticker.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-10-exhibition.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-11-flag.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-12-admin.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-13-guide.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-14-contact.html",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "index-map.html",
+      "width": 320,
+      "status": "passed"
+    }
+  ],
+  "checks": [
+    "Persian digits; geometric area only; invalid quantity; banner-upload-checkout-result-tracking; file metadata; delivery state",
+    "Poster choice; admin tariffs tab",
+    "Fixed light mode under dark system; offline icons and page navigation"
+  ],
+  "runtimeErrors": []
+}
