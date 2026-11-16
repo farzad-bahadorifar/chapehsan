@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>خلاصه برنامه اجرایی سامانه آنلاین چاپ احسان</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 12mm 14mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    margin: 0 0 4px 0;
+    font-size: 19px;
+    color: #0f172a;
+    font-weight: 800;
+  }
+  .header p {
+    margin: 0;
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 600;
+  }
+  .meta-tag {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 12px;
+    text-align: left;
+    font-size: 11px;
+    color: #475569;
+    line-height: 1.5;
+  }
+  
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-title::before {
+    content: "■";
+    color: #2563eb;
+    font-size: 12px;
+  }
+  
+  /* Flowchart Steps */
+  .flow-row {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .flow-step {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-top: 3px solid #2563eb;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+  }
+  .flow-num {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .flow-step-title {
+    font-weight: 700;
+    font-size: 11.5px;
+    color: #0f172a;
+    margin-bottom: 2px;
+  }
+  .flow-step-desc {
+    font-size: 10.5px;
+    color: #64748b;
+    line-height: 1.35;
+  }
+
+  /* Two Column Feature Grid */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 8px 0;
+  }
+  .feature-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .feature-title {
+    font-weight: 700;
+    font-size: 12px;
+    color: #1e3a8a;
+    margin-bottom: 3px;
+  }
+  .feature-desc {
+    font-size: 11px;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* Price & Schedule Bar */
+  .summary-bar {
+    background: #eff6ff;
+    border: 1.5px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 12px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .summary-item-title {
+    font-size: 11.5px;
+    color: #1e40af;
+    font-weight: 600;
+  }
+  .summary-item-val {
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 800;
+  }
+
+  /* Payment Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0;
+    font-size: 11.5px;
+  }
+  th, td {
+    padding: 6px 10px;
+    text-align: right;
+    border: 1px solid #e2e8f0;
+  }
+  th {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+  }
+  
+  .note {
+    font-size: 10.5px;
+    color: #64748b;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 12px;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 10.5px;
+    color: #94a3b8;
+  }
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <h1>خلاصه برنامه اجرایی سامانه آنلاین «چاپ احسان»</h1>
+      <p>فاز اول: سفارش آنلاین بنر + پنل مدیریت اختصاصی کارگاه</p>
+    </div>
+    <div class="meta-tag">
+      <div><strong>کارفرما:</strong> جناب آقای احسان</div>
+      <div><strong>دموی زنده آنلاین:</strong> <a href="https://farzad-bahadorifar.github.io/chapehsan/">مشاهده دمو روی موبایل</a></div>
+    </div>
+  </div>
+
+  <!-- CARD 1: STRATEGY -->
+  <div class="card">
+    <div class="card-title">۱. استراتژی راه‌اندازی سریع (چرا شروع با بنر؟)</div>
+    <p style="margin: 0; font-size: 12px; color: #334155;">
+      سایت با هر <strong>۶ خدمت اصلی چاپ احسان</strong> معرفی می‌شود. برای اینکه کار معطل نماند و چاپخانه در <strong>کمتر از ۶ هفته</strong> به درآمدزایی اینترنتی برسد، سفارش آنلاین کامل (محاسبه متراژ، آپلود فایل، پرداخت و پیگیری) روی <strong>«چاپ بنر»</strong> فعال می‌شود و ۵ خدمت دیگر با کارت معرفی و دکمه مستقیم تماس بالا می‌آیند تا به مرور آنلاین شوند.
+    </p>
+  </div>
+
+  <!-- CARD 2: WORKFLOW -->
+  <div class="card">
+    <div class="card-title">۲. فرآیند سفارش بنر از نگاه مشتری و چاپخانه</div>
+    <div class="flow-row">
+      <div class="flow-step">
+        <div class="flow-num">۱</div>
+        <div class="flow-step-title">ابعاد و خدمات</div>
+        <div class="flow-step-desc">ورود طول و عرض، انتخاب پانچ و ولد، محاسبه خودکار قیمت</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">۲</div>
+        <div class="flow-step-title">آپلود مستقیم</div>
+        <div class="flow-step-desc">ارسال فایل کیفیت اصلی (TIFF/PDF) با نوار پیشرفت</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">۳</div>
+        <div class="flow-step-title">پرداخت و پیامک</div>
+        <div class="flow-step-desc">پرداخت شتاب، صدور کد پیگیری و ارسال آنی پیامک</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">۴</div>
+        <div class="flow-step-title">پنل مدیریت احسان</div>
+        <div class="flow-step-desc">دانلود مستقیم فایل اصلی و تغییر وضعیت چاپ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 3: KEY ADVANTAGES -->
+  <div class="card">
+    <div class="card-title">۳. مزایای اختصاصی برای کارگاه چاپ احسان</div>
+    <div class="grid-2">
+      <div class="feature-box">
+        <div class="feature-title">⚡ بدون قطعی در شبکه ملی</div>
+        <div class="feature-desc">میزبانی روی دیتاسنتر داخلی لینوکس؛ در زمان قطعی کامل اینترنت بین‌الملل، سایت و درگاه بانکی بدون اختلال کار می‌کنند.</div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">🔒 حفاظت از فایل‌های مشتری</div>
+        <div class="feature-desc">فایل‌های چاپی در فضای خصوصی ذخیره شده و فقط با ورود احسان به پنل ادمین قابل دانلود هستند.</div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">📱 سبک و سریع روی گوشی</div>
+        <div class="feature-desc">طراحی لایت‌مود مدرن با لود فوق‌سریع روی ضعیف‌ترین اینترنت‌ها مخصوص کاربری راحت مشتری با موبایل.</div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">⚙️ تغییر قیمت‌ها توسط خودتان</div>
+        <div class="feature-desc">قیمت هر متر بنر، پانچ یا ولد در هر لحظه توسط احسان در پنل مدیریت قابل ویرایش است.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY BAR -->
+  <div class="summary-bar">
+    <div>
+      <div class="summary-item-title">مدت زمان تحویل فاز اول</div>
+      <div class="summary-item-val">۵ تا ۶ هفته کاری</div>
+    </div>
+    <div style="border-right: 1px solid #bfdbfe; height: 35px;"></div>
+    <div>
+      <div class="summary-item-title">دستمزد توسعه فنی اختصاصی</div>
+      <div class="summary-item-val">۱۱۵ میلیون تومان</div>
+    </div>
+    <div style="border-right: 1px solid #bfdbfe; height: 35px;"></div>
+    <div>
+      <div class="summary-item-title">نحوه پرداخت</div>
+      <div class="summary-item-val">در ۳ قسط متناسب با پیشرفت</div>
+    </div>
+  </div>
+
+  <!-- CARD 4: PAYMENT SCHEDULE -->
+  <div class="card">
+    <div class="card-title">۴. مراحل پرداخت فاز اول (گام‌به‌گام با تحویل خروجی)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>مرحله</th>
+          <th>مبلغ</th>
+          <th>شرط پرداخت و خروجی</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>قسط اول (پیش‌پرداخت)</strong></td>
+          <td>۳۵ میلیون تومان (۳۰٪)</td>
+          <td>عقد قرارداد و راه‌اندازی زیرساخت فنی و دیتابیس</td>
+        </tr>
+        <tr>
+          <td><strong>قسط دوم (نسخه تستی)</strong></td>
+          <td>۴۵ میلیون تومان (۴۰٪)</td>
+          <td>نمایش نسخه فعال (فرم سفارش بنر، آپلود فایل و پنل مدیریت)</td>
+        </tr>
+        <tr>
+          <td><strong>قسط سوم (تحویل نهایی)</strong></td>
+          <td>۳۵ میلیون تومان (۳۰٪)</td>
+          <td>استقرار روی دامنه اصلی، اتصال درگاه بانکی، آموزش پنل و تست کامل</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      * هزینه‌های جاری زیرساخت (دامنه، سرور لینوکس ابری و پیامک) شفاف و مستقیماً با مالکیت و پرداخت آقای احسان تهیه خواهد شد.
+    </div>
+  </div>
+
+  <div class="footer">
+    سامانه سفارش آنلاین چاپ احسان · نسخه خلاصه اجرایی جهت جلسه هماهنگی · آبان ۱۴۰۵
+  </div>
+
+</body>
+</html>

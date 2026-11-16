@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>کتابچه جامع راهنمای مذاکره و توسعه چاپ احسان (مخصوص مهندس فرزاد بهادری‌فر)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 12.5px;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .header {
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    color: #0f172a;
+    font-weight: 800;
+  }
+  .header p {
+    margin: 0;
+    font-size: 11.5px;
+    color: #0284c7;
+    font-weight: 600;
+  }
+  .confidential-tag {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 13.5px;
+    color: #0f172a;
+    border-right: 4px solid #0284c7;
+    padding-right: 8px;
+    margin: 14px 0 6px 0;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 11px;
+  }
+  th, td {
+    padding: 6px 8px;
+    text-align: right;
+    border: 1px solid #e2e8f0;
+  }
+  th {
+    background: #f8fafc;
+    color: #334155;
+    font-weight: 700;
+  }
+  tr:nth-child(even) td { background: #fafafa; }
+  .box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 11.5px;
+  }
+  .box-blue {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1e3a8a;
+  }
+  .dialogue {
+    background: #f0fdf4;
+    border-right: 3px solid #16a34a;
+    padding: 6px 10px;
+    margin: 6px 0;
+    font-style: italic;
+    color: #14532d;
+    font-size: 11.5px;
+  }
+  .dialogue strong { font-style: normal; color: #0f172a; }
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 16px;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 10.5px;
+    color: #94a3b8;
+  }
+  .page-break { page-break-after: always; }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <h1>راهنمای استراتژیک و کتابچه مذاکره (نسخه داخلی)</h1>
+      <p>پروژه سامانه سفارش آنلاین چاپ احسان · مخصوص مهندس فرزاد بهادری‌فر</p>
+    </div>
+    <div class="confidential-tag">سند محرمانه داخلی</div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>۱. استک معماری و قابلیت اطمینان فنی</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">بخش</th>
+        <th style="width: 35%;">فناوری انتخابی</th>
+        <th>علت انتخاب و مزیت در برابر مشتری</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>فرانت‌اند</strong></td>
+        <td>Angular 19/20 (Standalone)</td>
+        <td>ساختار سازمانی، سبکی، لود آنی، بدون وابستگی خارجی به CDN</td>
+      </tr>
+      <tr>
+        <td><strong>بک‌اند</strong></td>
+        <td>ASP.NET Core (.NET 10 LTS)</td>
+        <td>سرعت بسیار بالا در پردازش ابعاد، کم‌مصرف در منابع سرور، امنیت بالا</td>
+      </tr>
+      <tr>
+        <td><strong>دیتابیس</strong></td>
+        <td>PostgreSQL 17</td>
+        <td>پایگاه داده متن‌باز، قدرتمند و بدون تحریم</td>
+      </tr>
+      <tr>
+        <td><strong>ذخیره‌سازی فایل</strong></td>
+        <td>Local Private Storage</td>
+        <td>فایل‌های سنگین TIFF/PDF خارج از روت وب ذخیره شده و فقط ادمین به آن دسترسی دارد</td>
+      </tr>
+      <tr>
+        <td><strong>زیرساخت</strong></td>
+        <td>Docker Compose روی لینوکس ایران</td>
+        <td>تضمین ۱۰۰٪ پایداری و کارکرد کامل در صورت قطعی اینترنت بین‌الملل</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 2 -->
+  <h2>۲. فرمول محاسبه قیمت بنر (نکته کلیدی جلسه)</h2>
+  <div class="box box-blue">
+    <strong>قاعده محاسبه متراژ:</strong> مساحت = (طول سانتی‌متر × عرض سانتی‌متر) ÷ ۱۰,۰۰۰<br>
+    <strong>قاعده احسان:</strong> اگر مساحت کمتر از ۱٫۰ متر مربع باشد، همان ۱٫۰ متر مربع حساب می‌شود.<br>
+    <strong>خدمات تکمیلی:</strong> پانچ (تعداد × نرخ هر پانچ) + ولد/دوردوزی (محیط دور بنر بر حسب متر × نرخ هر متر ولد).<br>
+    <em>توصیه مهم در جلسه: ۵ فاکتور اخیر کارگاه را از احسان بگیرید تا فرمول ریاضی دقیقاً مطابق سیستم حسابداری او نهایی شود.</em>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2>۳. مدیریت زمان کاری شما (بعد از ساعت ۱۷)</h2>
+  <div class="box">
+    <strong>ظرفیت واقعی:</strong> شنبه تا چهارشنبه (روزی ۳ ساعت) = ۱۵ ساعت + جمعه (۶ ساعت) = ۲۱ تا ۲۴ ساعت در هفته.<br>
+    <strong>برآورد فاز اول:</strong> حدود ۱۴۰ تا ۱۵۰ ساعت کار تخصصی = <strong>۵ تا ۶ هفته کاری تقویمی</strong>.<br>
+    <strong>اصل محافظتی:</strong> هرگز به خاطر اصرار کارفرما قول زمان کمتر از ۵ هفته ندهید؛ خستگی تجمعی کار بعد از ساعت اداری نباید به شغل اصلی یا سلامت شما لطمه بزند.
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2>۴. سناریوی گام‌به‌گام جلسه امروز با احسان</h2>
+  <div class="dialogue">
+    <strong>گام ۱ (ارائه دمو روی گوشی احسان):</strong> «احسان جان، قبل از هر صحبتی، من وایرفریم تعاملی ۱۴ صفحه رو طبق نسخه جدید آماده کردم. این لینک رو روی گوشیت باز کن: farzad-bahadorifar.github.io/chapehsan ... ببین فرم بنر چقدر روون و سریع روی موبایل لود میشه.»
+  </div>
+  <div class="dialogue">
+    <strong>گام ۲ (تصویب فازبندی):</strong> «طبق پیشنهاد خودت، هر ۶ خدمت رو تو سایت معرفی می‌کنیم، اما سفارش آنلاین رو اول برای بنر کامل می‌کنیم تا کار معطل نشه و ظرف ۵-۶ هفته سایت بره تو خط درآمدزایی. ۵ خدمت دیگه فعلاً با دکمه تماس بالا میان تا به نوبت آنلاین بشن.»
+  </div>
+  <div class="dialogue">
+    <strong>گام ۳ (اعلام قیمت و اقساط):</strong> «برای پیاده‌سازی اختصاصی فاز اول، حدود ۱۴۰ تا ۱۵۰ ساعت کار نیازه. دستمزد توسعه ۱۱۵ میلیون تومان در ۳ قسطه (۳۵ میلیون پیش‌پرداخت، ۴۵ میلیون نسخه تستی، ۳۵ میلیون تحویل نهایی). هزینه‌های هاست، دامنه و پیامک هم شفاف مستقیماً به نام خودت ثبت و فاکتور میشه.»
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 5 -->
+  <h2>۵. ماتریس پاسخ به اعتراضات و چانه‌زنی‌های احتمالی</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">اعتراض احتمالی</th>
+        <th style="width: 50%;">پاسخ خونسرد و استدلالی شما</th>
+        <th>خط قرمز</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>«خیلی گرونه، فلان‌جا با ۳۰ تومن سایت می‌زنه»</strong></td>
+        <td>«درسته، برای فروشگاه کتاب یا لباس با قالب وردپرس قیمت همینه. اما تو چاپخانه فایل‌های ۲۰۰ مگابایتی میاد، مشتری ابعاد سانتی‌متری میده و با قطعی اینترنت هم نباید بخوابه. سیستم صنعتی اختصاصی سرمایه‌گذاری متفاوتیه.»</td>
+        <td><strong>هرگز زیر ۱۰۰ میلیون توافق نکنید.</strong> کار شبانه ارزان ارزش ندارد.</td>
+      </tr>
+      <tr>
+        <td><strong>«۱۱۵ تومن قبوله ولی همه ۶ تا خدمت رو آنلاین کن»</strong></td>
+        <td>«فرمول هر محصول فرق داره؛ پوستر شاسی و فوم‌برد داره، پرچم ابعاد و پایه داره. اگه همه رو الان بخوایم زمان بالای ۳ ماه میره. اول بنر به درآمد برسه، از سودش بقیه رو اضافه می‌کنیم.»</td>
+        <td>روی مرز فاز اول بایستید تا گرفتار کار بی‌پایان نشوید.</td>
+      </tr>
+      <tr>
+        <td><strong>«بیا درصدی یا شراکتی کار کنیم»</strong></td>
+        <td>«شما تخصصت چاپ و بازاریابیه و من نرم‌افزار. بهتره سایت تمام و کمال مال خودت باشه و من هم دستمزد مشخص بگیرم تا تعهدم شفاف باشه.»</td>
+        <td>هرگز مدل درصدی مبهم را نپذیرید.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 6 -->
+  <h2>۶. چک‌لیست ورودی‌هایی که باید از احسان تحویل بگیرید</h2>
+  <div class="box">
+    ۱. <strong>فاکتورهای نمونه:</strong> تصویر ۵ تا ۱۰ فاکتور بنر روزهای گذشته کارگاه.<br>
+    ۲. <strong>درگاه پرداخت و حساب:</strong> تصمیم‌گیری برای درگاه واسط (زرین‌پال سریع‌تر) یا مستقیم بانکی (نیاز به اینماد).<br>
+    ۳. <strong>دامنه:</strong> استعلام و ثبت نام دامنه مدنظر (مثلاً chapehsan.ir) با مشخصات هویتی احسان.<br>
+    ۴. <strong>پیش‌پرداخت قسط اول:</strong> واریز قسط اول (۳۵ میلیون تومان) پیش از شروع کدنویسی سورس‌کد اصلی.
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2>۷. سناریوی خروج محترمانه (اگر کارفرما توافق نکرد)</h2>
+  <div class="dialogue" style="background: #fffbeb; border-color: #d97706; color: #78350f;">
+    «احسان جان، خیلی ممنون از وقتی که گذاشتی. اگر در حال حاضر اولویت چاپخانه سرمایه‌گذاری متفاوتیه، کاملاً طبیعیه. وایرفریم‌ها و دمو دستت باشه؛ هر زمان احساس کردی چاپخانه آماده توسعه یک سیستم اتوماتیک و اختصاصیه، با کمال میل در خدمتت هستم.»
+  </div>
+
+  <div class="footer">
+    کتابچه راهنمای مذاکره و توسعه چاپ احسان · نسخه داخلی مهندس فرزاد بهادری‌فر · آبان ۱۴۰۵
+  </div>
+
+</body>
+</html>
