@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>طرح پیشنهادی و نقشه راه سامانه آنلاین چاپ احسان</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 16mm 14mm 16mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, -apple-system, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.65;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .header {
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-title h1 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 800;
+  }
+  .header-title h2 {
+    margin: 0;
+    font-size: 13px;
+    color: #0284c7;
+    font-weight: 600;
+  }
+  .meta-box {
+    text-align: left;
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.5;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .badge-blue { background: #e0f2fe; color: #0369a1; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  
+  h3 {
+    font-size: 15px;
+    color: #0f172a;
+    border-right: 4px solid #0284c7;
+    padding-right: 8px;
+    margin: 18px 0 8px 0;
+    font-weight: 700;
+  }
+  p {
+    margin: 6px 0;
+    text-align: justify;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px 0;
+    font-size: 12px;
+  }
+  th, td {
+    padding: 7px 10px;
+    text-align: right;
+    border: 1px solid #e2e8f0;
+  }
+  th {
+    background: #f8fafc;
+    color: #334155;
+    font-weight: 700;
+  }
+  tr:nth-child(even) td {
+    background: #fafafa;
+  }
+  
+  /* Schematic Workflow */
+  .workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 12px 0 16px 0;
+  }
+  .step-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-top: 3px solid #0284c7;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+  }
+  .step-num {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #0284c7;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .step-title {
+    font-weight: bold;
+    font-size: 11px;
+    color: #0f172a;
+    margin-bottom: 2px;
+  }
+  .step-desc {
+    font-size: 10px;
+    color: #64748b;
+    line-height: 1.4;
+  }
+
+  .alert-box {
+    background: #f0fdf4;
+    border-right: 4px solid #16a34a;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-size: 12px;
+    color: #14532d;
+  }
+  .price-highlight {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price-amount {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e40af;
+  }
+
+  .footer-note {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 11px;
+    color: #94a3b8;
+    text-align: center;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-title">
+      <h1>پیشنهاد فنی و نقشه راه سامانه «چاپ احسان»</h1>
+      <h2>فاز اول: پیاده‌سازی هسته سفارش آنلاین بنر و پنل مدیریت کارگاهی</h2>
+    </div>
+    <div class="meta-box">
+      <div><strong>کارفرما:</strong> جناب آقای احسان</div>
+      <div><strong>مجری و معمار:</strong> فرزاد بهادری‌فر</div>
+      <div><strong>تاریخ:</strong> آبان‌ماه ۱۴۰۵</div>
+      <div><span class="badge badge-green">پیش‌طرح و وایرفریم آماده</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h3>۱. هدف پروژه و تفاوت با سایت‌های معمولی</h3>
+  <p>
+    سامانه اختصاصی <strong>«چاپ احسان»</strong> با هدف حذف خطاهای محاسباتی، جلوگیری از گم‌شدن فایل‌های باکیفیت و خودکارسازی فرآیند فروش طراحی می‌شود. بر خلاف سایت‌های معمولی (فروشگاه کتاب یا پوشاک)، سفارش چاپ با فرمول‌های دقیق ابعاد (طول در عرض، حداقل ۱ متر)، خدمات تکمیلی (پانچ، ولد/دوردوزی) و جابه‌جایی فایل‌های سنگین گرافیکی (TIFF/PDF) سر و کار دارد که نیازمند معماری اختصاصی و صنعتی است.
+  </p>
+
+  <!-- SECTION 2 -->
+  <h3>۲. استراتژی فازبندی: چرا شروع با بنر؟</h3>
+  <p>
+    سایت با ۶ دسته خدمت اصلی (بنر، پوستر و عکس، پلات و لمینت، استیکر، سازه‌های نمایشگاهی و پرچم) بارگذاری خواهد شد. طبق توافق، به جای ماه‌ها معطلی برای اجرای همزمان همه گزینه‌ها، <strong>فاز اول منحصراً روی «چاپ بنر» (پرتکرارترین سفارش چاپخانه)</strong> با فرآیند کامل سفارش، پرداخت و پیگیری متمرکز است. ۵ خدمت دیگر دارای کارت معرفی اختصاصی با دکمه مستقیم «تماس تلفنی» هستند تا سایت در سریع‌ترین زمان آنلاین شده و درآمدزایی کند.
+  </p>
+
+  <!-- SCHEMATIC WORKFLOW -->
+  <h3>۳. فلوچارت و شماتیک فرآیند سفارش بنر</h3>
+  <div class="workflow-grid">
+    <div class="step-card">
+      <div class="step-num">۱</div>
+      <div class="step-title">انتخاب مشخصات</div>
+      <div class="step-desc">ورود طول و عرض، جنس بنر و انتخاب خدمات (پانچ و دوردوزی) با محاسبه خودکار متراژ</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">۲</div>
+      <div class="step-title">آپلود امن فایل</div>
+      <div class="step-desc">ارسال فایل کیفیت اصلی (TIFF/PDF) با نوار پیشرفت، بدون افت کیفیت و تغییر رنگ</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">۳</div>
+      <div class="step-title">پرداخت و رهگیری</div>
+      <div class="step-desc">پرداخت از طریق درگاه شتاب، دریافت آنی کد رهگیری و ارسال پیامک به مشتری و احسان</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">۴</div>
+      <div class="step-title">پنل مدیریت چاپ</div>
+      <div class="step-desc">دانلود مستقیم فایل اصلی توسط اپراتور، تغییر وضعیت سفارش و مدیریت لحظه‌ای تعرفه‌ها</div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h3>۴. ویژگی‌های کلیدی فنی (سازگار با شرایط شبکه ایران)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">ویژگی</th>
+        <th>اهمیت و فایده عملی برای چاپ احسان</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>پایداری در قطعی اینترنت</strong></td>
+        <td>سامانه روی سرورهای داخلی دیتاسنتر لینوکس ایران میزبانی شده و ۱۰۰٪ مستقل از ابزارها و CDNهای خارجی است. در زمان قطعی کامل اینترنت بین‌الملل، سایت و درگاه شتاب بدون وقفه کار می‌کنند.</td>
+      </tr>
+      <tr>
+        <td><strong>حفاظت از فایل‌های مشتری</strong></td>
+        <td>فایل‌های ارسالی خارج از مسیر عمومی سرور ذخیره می‌شوند تا در اینترنت یا گوگل لو نروند و فقط با ورود احسان به پنل ادمین قابل دانلود باشند.</td>
+      </tr>
+      <tr>
+        <td><strong>سرعت بالا روی گوشی</strong></td>
+        <td>طراحی فوق‌سبک و بهینه‌سازی‌شده برای موبایل، بدون فایل‌های سنگین، لود آنی حتی در اینترنت‌های ضعیف.</td>
+      </tr>
+      <tr>
+        <td><strong>استقلال کامل پنل</strong></td>
+        <td>امکان تغییر قیمت هر متر بنر یا هزینه پانچ و ولد توسط خود احسان در هر لحظه بدون نیاز به برنامه‌نویس.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 5 -->
+  <h3>۵. برنامه زمان‌بندی و گام‌های اجرایی (۵ هفته کاری)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">گام</th>
+        <th style="width: 20%;">مدت زمان</th>
+        <th>خروجی‌های تحویلی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>گام ۱: هسته و پایگاه</strong></td>
+        <td>هفته اول</td>
+        <td>راه‌اندازی معماری، دیتابیس PostgreSQL، و موتور محاسباتی ابعاد بنر</td>
+      </tr>
+      <tr>
+        <td><strong>گام ۲: فرم بنر و آپلود</strong></td>
+        <td>هفته دوم</td>
+        <td>پیاده‌سازی فرانت‌اند سفارش بنر، آپلودر فایل‌های پرحجم و پیش‌فاکتور زنده</td>
+      </tr>
+      <tr>
+        <td><strong>گام ۳: پرداخت و پیامک</strong></td>
+        <td>هفته سوم</td>
+        <td>اتصال درگاه شتاب بانکی، ارسال پیامک دوطرفه، صفحه پیگیری سفارش مشتری</td>
+      </tr>
+      <tr>
+        <td><strong>گام ۴: پنل چاپخانه</strong></td>
+        <td>هفته چهارم</td>
+        <td>پنل اختصاصی چاپ احسان (مشاهده صف سفارش، دانلود فایل، ویرایش نرخ‌ها)</td>
+      </tr>
+      <tr>
+        <td><strong>گام ۵: تست و تحویل</strong></td>
+        <td>هفته پنجم</td>
+        <td>استقرار روی سرور لینوکس، آزمون با فاکتورهای واقعی، آموزش پنل و شروع کار</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 6 -->
+  <h3>۶. شرایط مالی و نحوه پرداخت فاز اول</h3>
+  <div class="price-highlight">
+    <div>
+      <div style="font-weight: bold; color: #1e3a8a;">دستمزد تخصصی فاز اول (حدود ۱۴۰ تا ۱۵۰ ساعت کار متمرکز):</div>
+      <div style="font-size: 11px; color: #64748b;">توسعه مستقل و استاندارد از صفر با فریمورک‌های سازمانی Angular و .NET</div>
+    </div>
+    <div class="price-amount">۱۱۵ میلیون تومان</div>
+  </div>
+
+  <p><strong>پرداخت در ۳ قسط عادلانه متناسب با تحویل خروجی:</strong></p>
+  <ul>
+    <li><strong>قسط اول (۳۵ میلیون تومان - ۳۰٪):</strong> پیش‌پرداخت هنگام عقد قرارداد و شروع راه‌اندازی زیرساخت.</li>
+    <li><strong>قسط دوم (۴۵ میلیون تومان - ۴۰٪):</strong> پس از نمایش نسخه آزمایشی کامل (کارکرد فرم بنر، آپلود و پنل مدیریت).</li>
+    <li><strong>قسط سوم (۳۵ میلیون تومان - ۳۰٪):</strong> پس از راه‌اندازی کامل روی دامنه، اتصال درگاه بانکی، آموزش پنل و تست نهایی.</li>
+  </ul>
+
+  <div class="alert-box">
+    <strong>هزینه‌های زیرساخت ابری (مستقیماً به نام کارفرما):</strong> دامنه، هاست/سرور ابری داخلی (ماهانه حدود ۲ تا ۳ میلیون تومان) و پنل پیامک به صورت مستقیم با مالکیت و پرداخت آقای احسان تهیه خواهد شد.
+  </div>
+
+  <div class="footer-note">
+    سامانه سفارش آنلاین چاپ احسان · نسخه پروپوزال اجرایی فاز اول · دموی وایرفریم‌ها: farzad-bahadorifar.github.io/chapehsan
+  </div>
+
+</body>
+</html>
