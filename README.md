@@ -1,35 +1,42 @@
+<div dir="rtl">
+
 # پروژه سفارش آنلاین چاپ احسان (Chap Ehsan)
 
 سامانه سفارش آنلاین خدمات چاپ احسان با رویکرد موبایل‌محور (Mobile-First)، طراحی مینیمال و تجربه کاربری روان.
 
 ## 🔗 دموی آنلاین وایرفریم‌ها (GitHub Pages)
 
-دموی تعاملی و وایرفریم‌های فاز اول در نشانی زیر به صورت زنده در دسترس است:
+دموی تعاملی و وایرفریم‌های فاز اول در نشانی زیر به صورت زنده در دسترس است:  
 👉 **[مشاهده آنلاین دموی چاپ احسان](https://farzad-bahadorifar.github.io/chapehsan/)**
 
-- **نقشه و فهرست تمام صفحه‌ها:** [index-map.html](https://farzad-bahadorifar.github.io/chapehsan/index-map.html)
-- **فرم ثبت سفارش بنر:** [index-02-banner.html](https://farzad-bahadorifar.github.io/chapehsan/index-02-banner.html)
-- **آپلود فایل چاپ:** [index-03-upload.html](https://farzad-bahadorifar.github.io/chapehsan/index-03-upload.html)
-- **پیگیری سفارش:** [index-06-tracking.html](https://farzad-bahadorifar.github.io/chapehsan/index-06-tracking.html)
-- **پیش‌نمایش پنل مدیریت:** [index-12-admin.html](https://farzad-bahadorifar.github.io/chapehsan/index-12-admin.html)
+* 🗺️ **نقشه و فهرست تمام صفحه‌ها:** [index-map.html](https://farzad-bahadorifar.github.io/chapehsan/index-map.html)
+* 📋 **فرم ثبت سفارش بنر:** [index-02-banner.html](https://farzad-bahadorifar.github.io/chapehsan/index-02-banner.html)
+* 📤 **آپلود فایل چاپ:** [index-03-upload.html](https://farzad-bahadorifar.github.io/chapehsan/index-03-upload.html)
+* 🔍 **پیگیری سفارش:** [index-06-tracking.html](https://farzad-bahadorifar.github.io/chapehsan/index-06-tracking.html)
+* ⚙️ **پیش‌نمایش پنل مدیریت:** [index-12-admin.html](https://farzad-bahadorifar.github.io/chapehsan/index-12-admin.html)
 
 ---
 
-## 📁 ساختار مخزن
+## 📁 ساختار مخزن و مستندات
 
-```
+```text
 chapehsan/
-├── docs/                           # مستندات امکان‌سنجی، بودجه و یادداشت‌های فنی
-│   ├── ai-workflow-notes.fa.md     # یادداشت‌های داخلی بهره‌وری و هوش مصنوعی
-│   ├── angular-dotnet-feasibility.fa.md # بررسی فنی Angular و ASP.NET Core
-│   ├── project-budget.fa.md        # برآورد زمان، هزینه و محدوده نسخه اول
-│   └── notes/                      # یادداشت‌ها و تاریخچه گفتگوهای پروژه (Obsidian)
-└── wireframes/                     # وایرفریم‌ها و پیش‌طرح نسخه ۰٫۲
-    ├── dist/                       # فایل‌های استاتیک مستقل و قابل استقرار
-    ├── prototype-v02.fragment.html # سورس کامپوننت و قالب وایرفریم‌ها
-    ├── build.mjs                   # اسکریپت بیلد و تولید صفحات dist
-    ├── serve.mjs                   # سرور محلی سبک
-    └── verify.mjs                  # تست خودکار ساختار و صفحات
+├── docs/                                         # مستندات امکان‌سنجی، بودجه و یادداشت‌های فنی
+│   ├── proposals/                                # پیش‌نویس‌های نهایی، PDFها و راهنمای مذاکره
+│   │   ├── chapehsan-developer-playbook.fa.md   # راهنمای جامع برنامه‌نویس، نقدها و برآورد ماژول‌های آتی
+│   │   ├── chapehsan-summary-client.fa.md       # خلاصه اجرایی جهت ارائه به کارفرما
+│   │   └── chapehsan-proposal-phase1.fa.md       # پروپوزال جامع فاز اول
+│   ├── developer-guide-and-future-phases.fa.md  # سند تکمیلی برآورد واقع‌بینانه فازهای ۲ تا ۵
+│   ├── project-budget.fa.md                      # برآورد زمان، هزینه و محدوده نسخه اول (MVP)
+│   ├── angular-dotnet-feasibility.fa.md          # امکان‌سنجی معماری Angular و ASP.NET Core
+│   ├── ai-workflow-notes.fa.md                   # یادداشت‌های داخلی بهره‌وری و هوش مصنوعی
+│   └── notes/                                   # یادداشت‌ها و تاریخچه گفتگوهای پروژه (Obsidian)
+└── wireframes/                                   # وایرفریم‌ها و پیش‌طرح نسخه ۰٫۲
+    ├── dist/                                     # فایل‌های استاتیک مستقل و قابل استقرار روی GitHub Pages
+    ├── prototype-v02.fragment.html               # سورس اصلی کامپوننت و قالب وایرفریم‌ها
+    ├── build.mjs                                 # اسکریپت تولید صفحات استاتیک مستقل
+    ├── serve.mjs                                 # وب‌سرور محلی سبک
+    └── verify.mjs                                # تست خودکار صحه‌گذاری ساختار و تعاملات
 ```
 
 ---
@@ -45,7 +52,7 @@ node wireframes/build.mjs
 # اجرای سرور محلی
 node wireframes/serve.mjs
 ```
-سپس آدرس `http://127.0.0.1:4173/` را در مرورگر باز کنید.
+سپس آدرس `http://127.0.0.1:4173/` را در مرورگر باز کنید.  
 همچنین فایل `wireframes/dist/index.html` بدون نیاز به اینترنت و به صورت آفلاین در هر مرورگری باز می‌شود.
 
 ---
@@ -56,4 +63,17 @@ node wireframes/serve.mjs
 2. **جریان سفارش آنلاین بنر:** محاسبه ابعاد و متراژ، انتخاب خدمات تکمیلی (پانچ، ولد/دوخت)، دریافت فایل با کنترل اندازه و فرمت، پرداخت آنلاین و دریافت کد رهگیری.
 3. **پیگیری سفارش:** استعلام وضعیت تولید و پرداخت بر اساس شماره سفارش و شماره تماس.
 4. **پنل مدیریت چاپخانه:** مشاهده سفارش‌ها، دریافت فایل اصلی، تغییر وضعیت سفارش و مدیریت تعرفه‌ها.
-5. **سایر ۵ دسته:** نمایش کارت معرفی محصول و دکمه تماس جهت هماهنگی تا زمان فعال‌سازی آنلاین.
+5. **سایر ۵ دسته:** نمایش کارت معرفی محصول و دکمه تماس جهت هماهنگی تا زمان فعال‌سازی آنلاین در فازهای بعدی.
+
+---
+
+## 🗺️ نقشه راه و فازهای بعدی (Future Phases)
+
+جزئیات کامل ساعت‌ها، پیچیدگی فنی و هزینه‌های برآوردی در [کتابچه توسعه‌دهنده](docs/proposals/chapehsan-developer-playbook.fa.md) و [سند ماژول‌های آتی](docs/developer-guide-and-future-phases.fa.md) ثبت شده است:
+
+* **فاز ۲ (چاپ فضای داخل و دکوراتیو):** پوستر و تخته‌شاسی MDF + فوم‌برد + پلات، لمینت سرد و گرم و اکوسالونت.
+* **فاز ۳ (سازه و رویدادها):** استیکر و مش با برش کاترپلاتر + سازه‌های نمایشگاهی (رول‌آپ و استند X) + پرچم‌های تشریفات، رومیزی و ساحلی.
+* **فاز ۴ (اتوماسیون فرآیندی):** ورود پیامکی با رمز یک‌بارمصرف (OTP) و پنل جامع مشتریان + موتور اعتبارسنجی خودکار فایل (Preflight Engine).
+* **فاز ۵ (ابزارها و توسعه تجاری):** پنل ویژه همکاران B2B با قیمت‌گذاری پلکانی + اتوماسیون بارکدی خط تولید چاپخانه + طراحی آنلاین با قالب‌های آماده.
+
+</div>
