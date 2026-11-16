@@ -22,7 +22,8 @@ chapehsan/
 ├── docs/                           # مستندات امکان‌سنجی، بودجه و یادداشت‌های فنی
 │   ├── ai-workflow-notes.fa.md     # یادداشت‌های داخلی بهره‌وری و هوش مصنوعی
 │   ├── angular-dotnet-feasibility.fa.md # بررسی فنی Angular و ASP.NET Core
-│   └── project-budget.fa.md        # برآورد زمان، هزینه و محدوده نسخه اول
+│   ├── project-budget.fa.md        # برآورد زمان، هزینه و محدوده نسخه اول
+│   └── notes/                      # یادداشت‌ها و تاریخچه گفتگوهای پروژه (Obsidian)
 └── wireframes/                     # وایرفریم‌ها و پیش‌طرح نسخه ۰٫۲
     ├── dist/                       # فایل‌های استاتیک مستقل و قابل استقرار
     ├── prototype-v02.fragment.html # سورس کامپوننت و قالب وایرفریم‌ها
